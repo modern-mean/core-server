@@ -1,0 +1,44 @@
+{
+  "name": "modern-mean-core-server",
+  "version": "0.0.1",
+  "description": "Module for express server.",
+  "main": "dist/",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modern-mean/modern-mean-core-material.git"
+  },
+  "keywords": [
+    "Core"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modern-mean/modern-mean-core-material/issues"
+  },
+  "homepage": "https://github.com/modern-mean/modern-mean-core-material#readme",
+  "dependencies": {
+    "compression": "~1.6.1",
+    "connect-livereload": "~0.5.4",
+    "consolidate": "^0.14.1",
+    "express": "~4.13.4",
+    "express-force-ssl": "~0.3.1",
+    "glob": "~7.0.0",
+    "globby": "~4.0.0",
+    "helmet": "~1.3.0",
+    "lodash": "~4.6.1",
+    "modern-mean-build-gulp": "github:modern-mean/build-gulp",
+    "morgan": "~1.7.0",
+    "server-destroy": "~1.0.1",
+    "swig": "^1.4.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "modern-mean-build-gulp": "github:modern-mean/build-gulp"
+  }
+}
