@@ -24,6 +24,7 @@ function load() {
           cert: process.env.MM_CORE_HTTPS_CERT || __dirname + '/../ssl/cert.pem'
         }
       },
+      static: process.env.MM_CORE_SERVER_STATIC || './public',
       livereload: process.env.MM_CORE_LIVERELOAD || 'false'
     },
     logs: {
@@ -39,8 +40,7 @@ function load() {
       }
     },
     modules: {
-      core: process.env.MM_CORE_MODULES_CORE || '../core.module.js',
-      custom: process.env.MM_CORE_MODULES_CUSTOM || ['./modules/*/dist/server/!(*core).module.js', './node_modules/modern-mean-*/dist/server/!(*core).module.js']
+      custom: process.env.MM_CORE_MODULES_CUSTOM || ['./node_modules/modern-mean-!(*core-server)/dist/server/*.module.js']
     },
     swig: {
       layout: process.env.MM_CORE_SERVER_LAYOUT || 'material',

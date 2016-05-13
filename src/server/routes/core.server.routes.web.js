@@ -10,7 +10,7 @@ function init(app) {
     logger.debug('Core::Server::Web::Routes::Start');
     let router = express.Router();
 
-    router.use('./public', express.static(config.swig.views));
+    router.use('/', express.static(config.express.static));
     router.get('/*', controller.renderIndex);
 
     app.use(router);

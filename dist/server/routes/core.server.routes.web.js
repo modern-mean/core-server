@@ -26,7 +26,7 @@ function init(app) {
     _logger2.default.debug('Core::Server::Web::Routes::Start');
     let router = _express2.default.Router();
 
-    router.use('./public', _express2.default.static(_server.config.swig.views));
+    router.use('/', _express2.default.static(_server.config.express.static));
     router.get('/*', _coreServerController2.default.renderIndex);
 
     app.use(router);
