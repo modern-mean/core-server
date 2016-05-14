@@ -103,13 +103,13 @@ describe('/modules/core/server/app/init.js', () => {
       describe('https', () => {
 
         before(() => {
-          process.env.MM_CORE_HTTPS = 'true';
+          process.env.MM_CORE_SERVER_HTTPS = 'true';
           config.load();
           return app.start();
         });
 
         after(() => {
-          delete process.env.MM_CORE_HTTPS;
+          delete process.env.MM_CORE_SERVER_HTTPS;
           config.load();
           return app.stop();
         });

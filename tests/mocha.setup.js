@@ -15,8 +15,8 @@ global.should = chai.should();
 global.sinon = sinon;
 global.request = request;
 
-process.env.MM_CORE_HTTPS_PORT = 8444;
-process.env.MM_CORE_HTTP_PORT = 8081;
+process.env.MM_CORE_SERVER_HTTPS_PORT = 8444;
+process.env.MM_CORE_SERVER_HTTP_PORT = 8081;
 
 
 config.load();
