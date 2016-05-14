@@ -23,7 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function init(app) {
   return new Promise(function (resolve, reject) {
-    if (_server.config.type === 'api') {
+    if (_server.config.modules.api !== 'true') {
       return resolve();
     }
     _logger2.default.debug('Core::Server::Web::Init::Start');

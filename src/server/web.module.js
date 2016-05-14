@@ -9,7 +9,7 @@ import { config } from './config/server';
 
 function init(app) {
   return new Promise(function (resolve, reject) {
-    if (config.type === 'api') {
+    if (config.modules.api !== 'true') {
       return resolve();
     }
     logger.debug('Core::Server::Web::Init::Start');

@@ -40,13 +40,14 @@ function load() {
       }
     },
     modules: {
-      custom: process.env.MM_CORE_MODULES_CUSTOM || ['./node_modules/modern-mean-!(*core-server)/dist/server/*.module.js']
+      custom: process.env.MM_CORE_MODULES_CUSTOM || ['./node_modules/modern-mean-!(*core-server)/dist/server/*.module.js'],
+      web: process.env.MM_CORE_SERVER_MODULE_WEB || 'true',
+      api: process.env.MM_CORE_SERVER_MODULE_API || 'true',
     },
     swig: {
       layout: process.env.MM_CORE_SERVER_LAYOUT || 'material',
       views: process.env.MM_CORE_SERVER_VIEWS || './dist/server/views'
-    },
-    type: process.env.MM_CORE_SERVER_TYPE || 'fullstack' //Options are web, api, fullstack
+    }
   };
 }
 

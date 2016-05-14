@@ -8,7 +8,7 @@ import { config } from './config/server';
 
 function init(app) {
   return new Promise(function (resolve, reject) {
-    if (config.type === 'web') {
+    if (config.modules.web !== 'true') {
       return resolve(app);
     }
     logger.debug('Core::Server::Api::Start');
